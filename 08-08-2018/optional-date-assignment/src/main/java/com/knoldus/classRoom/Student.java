@@ -12,7 +12,7 @@ public class Student {
     {
         this.name="bantesh";
         this.rollNo=1;
-        this.subject=Optional.of(Arrays.asList("MatheMatics"));
+
     }
     public Student(String name,long rollNo,Optional<List<String>>subject)
     {
@@ -20,14 +20,18 @@ public class Student {
         this.rollNo=rollNo;
         this.subject=subject;
     }
-    String getName(){
+   public String getName(){
         return name;
     }
     long getRollNo(){
         return rollNo;
     }
-    Optional<List<String>> getSubject()
+   public Optional<List<String>> getSubject()
     {
         return subject;
+    }
+    @Override
+    public String toString() {
+        return "(Name: "+ name + ", Roll no: " + rollNo + ")";
     }
 }
